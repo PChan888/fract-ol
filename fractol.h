@@ -61,7 +61,7 @@ typedef struct s_complex
 }				t_complex;
 
 int			print_help_guide(void);
-int			parser_args(int argc, char **argv, t_fractol *var);
+int			parser_args(int argc, char **argv, t_fractol *f);
 double		ft_atof(const char *str);
 void		init_fractol(t_fractol *f);
 t_complex	ft_map_complex(int x, int y, t_fractol *f);

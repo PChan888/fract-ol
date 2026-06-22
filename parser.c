@@ -20,18 +20,43 @@ int	print_help_guide(void)
 	return (1);
 }
 
-int	parser_args(int argc, char **argv, t_fractol *var)
+static int	is_valid_number(const char *str)
+{
+	int	has_digit;
+
+	has_digit = 0;
+	if (*str == '-' || *str == '+')
+		str++;
+	while (ft_isdigit(*str))
+	{
+		has_digit = 1;
+		str++;
+	}
+	if (*str == '.')
+	{
+		str++;
+		while (ft_isdigit(*str))
+		{
+			has_digit = 1;
+			str++;
+		}
+	}
+	return (has_digit && *str == '\0');
+}
+
+int	parser_args(int argc, char **argv, t_fractol *f)
 {
 	int	status;
 
 	status = 0;
 	if (argc == 2 && ft_strncmp(argv[1], "mandelbrot", 11) == 0)
-		var->type = MANDELBROT;
-	else if (argc == 4 && ft_strncmp(argv[1], "julia", 6) == 0)
+		f->type = MANDELBROT;
+	else if (argc == 4 && ft_strncmp(argv[1], "julia", 6) == 0
+		&& is_valid_number(argv[2]) && is_valid_number(argv[3]))
 	{
-		var->type = JULIA;
-		var->julia_r = ft_atof(argv[2]);
-		var->julia_i = ft_atof(argv[3]);
+		f->type = JULIA;
+		f->julia_r = ft_atof(argv[2]);
+		f->julia_i = ft_atof(argv[3]);
 	}
 	else
 	{
