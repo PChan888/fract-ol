@@ -3,10 +3,7 @@
 ## Description
 
 Fract'ol is a small fractal exploration program built with the school's MiniLibX
-graphics library. It renders the Mandelbrot set, the Julia set, and the Burning
-Ship fractal, using complex-number iteration and smooth HSV-based coloring to
-reveal the depth of each set. The view can be explored interactively: the mouse
-wheel zooms in and out centered on the cursor, and the arrow keys pan the view.
+graphics library. It renders the Mandelbrot set, the Julia set, using complex-number iteration and HSV-based coloring to reveal the depth of each set. The view can be explored interactively: the mouse wheel zooms in and out centered on the cursor, and the arrow keys pan the view.
 
 ## Instructions
 
@@ -23,12 +20,10 @@ This builds `Libft` and `minilibx-linux` first, then compiles and links the `fra
 ```
 ./fractol mandelbrot
 ./fractol julia <re> <im>
-./fractol burning_ship
 ```
 
 - `mandelbrot` — renders the Mandelbrot set.
 - `julia <re> <im>` — renders the Julia set for the complex constant `re + im*i` (e.g. `./fractol julia 0.285 0.01`).
-- `burning_ship` — renders the Burning Ship fractal.
 
 If no argument or an invalid argument is given, the program prints the usage list above and exits.
 
