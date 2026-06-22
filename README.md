@@ -3,7 +3,7 @@
 ## Description
 
 Fract'ol is a small fractal exploration program built with the school's MiniLibX
-graphics library. It renders the Mandelbrot set, the Julia set, using complex-number iteration and HSV-based coloring to reveal the depth of each set. The view can be explored interactively: the mouse wheel zooms in and out centered on the cursor, and the arrow keys pan the view.
+graphics library. It renders the Mandelbrot set and the Julia set using complex-number iteration and HSV-based coloring to reveal the depth of each set. The view can be explored interactively: the mouse wheel zooms in and out centered on the cursor, and the arrow keys pan the view.
 
 ## Instructions
 
@@ -45,6 +45,6 @@ If no argument or an invalid argument is given, the program prints the usage lis
 AI was used throughout this project's development, primarily to:
 - Explain project-related concepts and source learning materials.
 - Diagnose and fix build/Makefile issues (compiler/linker flags, linking Libft and MiniLibX, an unrelated `-lbsd` link failure in MiniLibX's bundled test program).
-- Debbug errors and serve as a guide to fix them.
+- Debug errors and serve as a guide to fix them.
 
 Every change was reviewed and is understood before being kept in the project.

@@ -44,7 +44,7 @@ $(MLX):
 	$(MAKE) -C minilibx-linux
 
 $(NAME): $(OBJS) $(LIBFT) $(MLX)
-	$(CC) $(OBJS) $(LIBFT) $(MLX) -lXext -lX11 -lm -o $(NAME)
+	$(CC) $(OBJS) $(LIBFT) $(MLX) -lXext -lX11 -o $(NAME)
 
 clean:
 	$(RM) $(OBJS)

@@ -60,6 +60,3 @@ void	init_fractol(t_fractol *f)
 	init_mlx(f);
 	init_view(f);
 }
-
-// f->color
-// f->zoom

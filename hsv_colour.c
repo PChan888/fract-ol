@@ -12,7 +12,7 @@
 
 #include "fractol.h"
 
-// 0x00RRGGBB binary shift 
+// 0x00RRGGBB binary shift
 // (0x00)(77)(255)(0) 00000000 01001101 11111111 00000000
 static int	hsv_to_rgb(double h, double f)
 {
